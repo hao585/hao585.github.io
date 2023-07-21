@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>Hexo用户手册</title>
+    <link href="/2023/07/21/Hexo%20Fluid/"/>
+    <url>/2023/07/21/Hexo%20Fluid/</url>
+    
+    <content type="html"><![CDATA[<h1 id="关于指南"><a href="#关于指南" class="headerlink" title="关于指南"></a>关于指南</h1><div class="note note-success">            <p>TIP</p><p>致主题的新用户：</p><p>本指南经过数个版本打磨，绝大部分的功能都有详细说明，请仔细阅读，节约自己和他人的时间；</p><p>本指南中提到的：”站点配置” 指的 Hexo 博客目录下的 _config.yml，”主题配置” 指的是 theme&#x2F;fluid&#x2F;_config.yml 或者 _config.fluid.yml ，注意区分；</p><p>本指南中提到的 source 目录都指的是博客目录下的 source 文件夹，不推荐修改主题内 source 目录；</p><p>每次无论 hexo g 或 hexo s，都最好先使用 hexo clean 清除本地缓存；</p><p>页面结果以本地 hexo s 为准，部署后的异常大部分是线上缓存原因，在确认没有报错的情况下，等待若干时间后即可正常；</p><p>由于主题的不同版本会存在配置差异，本指南以最新版本为准。</p>          </div>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Fluid</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello Hexo</title>
     <link href="/2023/07/21/hello-world2/"/>
     <url>/2023/07/21/hello-world2/</url>
