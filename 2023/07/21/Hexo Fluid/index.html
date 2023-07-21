@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/th.jpg">
 <meta property="article:published_time" content="2023-07-21T07:35:45.000Z">
-<meta property="article:modified_time" content="2023-07-21T08:18:14.395Z">
+<meta property="article:modified_time" content="2023-07-21T09:06:32.192Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Fluid">
@@ -375,24 +375,23 @@
   
     <article id="comments" lazyload>
       
-  <div class="disqus" style="width:100%">
-    <div id="disqus_thread"></div>
-    
-      <script type="text/javascript">
-        var disqus_config = function() {
-          this.page.url = 'http://example.com/2023/07/21/Hexo%20Fluid/';
-          this.page.identifier = '/2023/07/21/Hexo%20Fluid/';
-        };
-        Fluid.utils.loadComments('#disqus_thread', function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//' + 'fluid' + '.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', new Date());
-          (d.head || d.body).appendChild(s);
-        });
-      </script>
-    
-    <noscript>Please enable JavaScript to view the comments</noscript>
-  </div>
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"58f30ab21e1a7e7b84d4","clientSecret":"8699b5097ea2ffc44ea51660f3147c9f46e5f42f","repo":"hao585.github.io","owner":"hao585","admin":["hao582"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '523449b7bff76cad89828651037268fa'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
     </article>
