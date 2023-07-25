@@ -24,7 +24,7 @@
 <meta property="og:description" content="这里写关于页的正文，支持 Markdown, HTML">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-21T06:02:14.000Z">
-<meta property="article:modified_time" content="2023-07-21T06:03:26.255Z">
+<meta property="article:modified_time" content="2023-07-25T03:09:35.956Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -282,6 +282,34 @@
     <h3 id="这里写关于页的正文，支持-Markdown-HTML"><a href="#这里写关于页的正文，支持-Markdown-HTML" class="headerlink" title="这里写关于页的正文，支持 Markdown, HTML"></a>这里写关于页的正文，支持 Markdown, HTML</h3>
   </div>
 
+  
+    <!-- Comments -->
+    <article id="comments" lazyload>
+      
+      
+        
+      
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"dae7d64f427e004d773c","clientSecret":"46f6ed166a889a5d250397ee8b66b6246ffc9ac2","repo":"hao585.github.io","owner":"hao585","admin":["hao585"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'a7224db13f3a49096aa27c1876d1a947'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
   
 </article>
 
