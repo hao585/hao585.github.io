@@ -16,24 +16,30 @@
   <meta name="author" content="铁蛋">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Git常用指令             设置全局的用户名称1git config --global user.name &quot;用户名&quot;设置全局的邮箱地址1git config --global user.email &quot;邮箱地址&quot;查看全局配置信息1git config --list创建本地仓库1git init添加到暂存区123git add 文件名称#回撤git">
+    <meta name="description" content="问题来了，如果你现在在自己的笔记本上写的博客，部署在了网站上，那么你在家里用台式机，或者实验室的台式机，发现你电脑里面没有博客的文件，或者要换电脑了，最后不知道怎么移动文件，怎么办？在这里我们就可以利用git的分支系统进行多终端工作了，这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作了。             机制机制是这样">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
-<meta property="og:url" content="http://example.com/2023/07/25/git%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="hexo+git分支实现多终端工作">
+<meta property="og:url" content="http://example.com/2023/07/26/hexo+git%E5%88%86%E6%94%AF%E5%AE%9E%E7%8E%B0%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%B7%A5%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Git常用指令             设置全局的用户名称1git config --global user.name &quot;用户名&quot;设置全局的邮箱地址1git config --global user.email &quot;邮箱地址&quot;查看全局配置信息1git config --list创建本地仓库1git init添加到暂存区123git add 文件名称#回撤git">
+<meta property="og:description" content="问题来了，如果你现在在自己的笔记本上写的博客，部署在了网站上，那么你在家里用台式机，或者实验室的台式机，发现你电脑里面没有博客的文件，或者要换电脑了，最后不知道怎么移动文件，怎么办？在这里我们就可以利用git的分支系统进行多终端工作了，这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作了。             机制机制是这样">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-25T08:45:10.000Z">
-<meta property="article:modified_time" content="2023-07-25T09:23:14.450Z">
+<meta property="og:image" content="http://example.com/img/article/2023/7/1.png">
+<meta property="og:image" content="http://example.com/img/article/2023/7/2.jpg">
+<meta property="og:image" content="http://example.com/img/article/2023/7/3.png">
+<meta property="og:image" content="http://example.com/img/article/2023/7/4.png">
+<meta property="article:published_time" content="2023-07-26T05:37:54.649Z">
+<meta property="article:modified_time" content="2023-07-26T06:14:48.917Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hexo">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/article/2023/7/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>git常用命令 - Hexo</title>
+  <title>hexo+git分支实现多终端工作 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="git常用命令"></span>
+            <span id="subtitle" data-typed-text="hexo+git分支实现多终端工作"></span>
           
         </div>
 
@@ -210,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-25 16:45" pubdate>
-          星期二, 七月 25日 2023, 4:45 下午
+        <time datetime="2023-07-26 13:37" pubdate>
+          星期三, 七月 26日 2023, 1:37 下午
         </time>
       </span>
     
@@ -223,7 +229,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          1.9k 字
+          1.3k 字
         
       </span>
     
@@ -235,7 +241,7 @@
         
         
           <!-- compatible with older versions-->
-          16 分钟
+          11 分钟
         
       </span>
     
@@ -272,14 +278,56 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">git常用命令</h1>
+            <h1 id="seo-header">hexo+git分支实现多终端工作</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Git常用指令"><a href="#Git常用指令" class="headerlink" title="Git常用指令"></a>Git常用指令</h1><div class="note note-info">
-            <h1 id="设置全局的用户名称"><a href="#设置全局的用户名称" class="headerlink" title="设置全局的用户名称"></a>设置全局的用户名称</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git config --global user.name <span class="hljs-string">&quot;用户名&quot;</span><br></code></pre></td></tr></table></figure><h1 id="设置全局的邮箱地址"><a href="#设置全局的邮箱地址" class="headerlink" title="设置全局的邮箱地址"></a>设置全局的邮箱地址</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git config --global user.email <span class="hljs-string">&quot;邮箱地址&quot;</span><br></code></pre></td></tr></table></figure><h1 id="查看全局配置信息"><a href="#查看全局配置信息" class="headerlink" title="查看全局配置信息"></a>查看全局配置信息</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git config --list<br></code></pre></td></tr></table></figure><h1 id="创建本地仓库"><a href="#创建本地仓库" class="headerlink" title="创建本地仓库"></a>创建本地仓库</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git init<br></code></pre></td></tr></table></figure><h1 id="添加到暂存区"><a href="#添加到暂存区" class="headerlink" title="添加到暂存区"></a>添加到暂存区</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">git add 文件名称<br><span class="hljs-comment">#回撤</span><br>git <span class="hljs-built_in">rm</span> --cached 文件名称<br></code></pre></td></tr></table></figure><h1 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h1><p>红色代表没有被git管理的文件，即使是已经管理过，但是修改后，也是红色的状态</p><p>绿色代表添加到暂存区的文件</p><p>已暂存：文件被管理到暂存区，绿色</p><p>未修改：文件还没有被管理到暂存区，红色</p><p>已提交：文件已经交给git仓库进行管理了</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git status<br></code></pre></td></tr></table></figure><h1 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git commit -m <span class="hljs-string">&quot;日志信息&quot;</span><br></code></pre></td></tr></table></figure><h1 id="查看日志信息"><a href="#查看日志信息" class="headerlink" title="查看日志信息"></a>查看日志信息</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 查看本地日志信息</span><br>git <span class="hljs-built_in">log</span><br><span class="hljs-comment"># 查看本地日志信息，简介模式</span><br>git <span class="hljs-built_in">log</span> --oneline<br><span class="hljs-comment"># 查看历史日志信息</span><br>git reflog<br><span class="hljs-comment">#查看文件内容</span><br><span class="hljs-built_in">cat</span> 文件名称<br></code></pre></td></tr></table></figure><h1 id="版本切换"><a href="#版本切换" class="headerlink" title="版本切换"></a>版本切换</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git reset --hard 版本唯一标识<br></code></pre></td></tr></table></figure><h1 id="查看提交文件的内容"><a href="#查看提交文件的内容" class="headerlink" title="查看提交文件的内容"></a>查看提交文件的内容</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 查看此次提交的文件列表</span><br>git ls-tree commit唯一标识<br><br><span class="hljs-comment"># 查看文件列表中的文件内容</span><br>git cat-file blob 文件的唯一标识<br></code></pre></td></tr></table></figure><h1 id="文件内容比较"><a href="#文件内容比较" class="headerlink" title="文件内容比较"></a>文件内容比较</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 比较的是本地仓库的工作目录的文件差异</span><br>git diff 文件名称<br><br><span class="hljs-comment"># 其他版本的文件比较，比较的是其他版本的本地仓库的内容和当前的文件的差异</span><br>git diff 版本标识 文件名称<br></code></pre></td></tr></table></figure><h1 id="文件删除"><a href="#文件删除" class="headerlink" title="文件删除"></a>文件删除</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sh"><br><span class="hljs-comment"># 如果文件没有被本地仓库管理，那么可以直接删除</span><br><span class="hljs-comment"># 如果文件已经被本地仓库管理，那么直接删除，本地仓库中还是包含这个文件的</span><br><span class="hljs-comment"># 先删除文件，再添加到暂存区，然后提交到本地仓库中</span><br><span class="hljs-built_in">rm</span> -rf 文件名称<br><br>git add .<br><br>git commit -m <span class="hljs-string">&quot;日志信息&quot;</span><br></code></pre></td></tr></table></figure><h1 id="文件找回"><a href="#文件找回" class="headerlink" title="文件找回"></a>文件找回</h1><p>通过版本切换的命令，切换到没有删除的版本当中即可，保存好你当前的代码，再去操作</p><h1 id="git分支命令"><a href="#git分支命令" class="headerlink" title="git分支命令"></a>git分支命令</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment">#查看分支</span><br>git branch<br><span class="hljs-comment">#创建分支 创建的新的分支和当前分支的内容是一致的</span><br>git branch 分支名称<br><span class="hljs-comment">#切换分支</span><br>git checkout 分支名称<br><span class="hljs-comment">#切换并创建分支</span><br>git checkout -b 分支名称 <br><span class="hljs-comment">#删除分支</span><br><span class="hljs-comment">#创建出的分支如果没有被修改，可以通过普通的方式进行删除</span><br><span class="hljs-comment">#创建出的分支如果被修改过，那么就必须强制删除了</span><br> <span class="hljs-comment"># 普通删除</span><br> git branch -d 分支名称<br> <br> <span class="hljs-comment"># 强制删除</span><br> git branch -D 分支名称<br> <span class="hljs-comment"># 分支合并</span><br><span class="hljs-comment">#将目标分支合并到当前分支中，合并的是文件夹、文件、文件内容</span><br><span class="hljs-comment">#这里要注意的是，如果两个分支或多个开发者修改了同一个文件，就会产生冲突的问题</span><br>git merge 目标分支名称<br><br><br></code></pre></td></tr></table></figure><h1 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h1><p>解决冲突也非常简单，删除标记 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> <code>===========</code> <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>，保留代码，提交到本地仓库即可，同时也可以推送到远程仓库</p><h1 id="git远程命令"><a href="#git远程命令" class="headerlink" title="git远程命令"></a>git远程命令</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment">#关联远程仓库</span><br><span class="hljs-comment"># 建立远程仓库的关联关系，可以建立多个</span><br>git remote add 关联名称 仓库地址<br><br><span class="hljs-comment"># 查询当前本地仓库关联的远程仓库关系</span><br>git remote -v<br></code></pre></td></tr></table></figure><h1 id="删除远程仓库关系"><a href="#删除远程仓库关系" class="headerlink" title="删除远程仓库关系"></a>删除远程仓库关系</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git remote remove 关联名称<br></code></pre></td></tr></table></figure><h1 id="推送本地仓库代码到远程仓库中"><a href="#推送本地仓库代码到远程仓库中" class="headerlink" title="推送本地仓库代码到远程仓库中"></a>推送本地仓库代码到远程仓库中</h1><p>第一次推送代码时，会输入用户名和密码</p><p>如果密码输入错误，清理windows的git凭证，重新推送，输入用户名和密码</p><p>***注意先从远程仓库更新代码下来再进行推送</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><br>git push 关联名称 本地仓库分支名称<br></code></pre></td></tr></table></figure><h1 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h1><p>除了远程仓库的默认分支外，其余分支都可以被删除掉</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git push -d 关联名称 远程分支名称<br></code></pre></td></tr></table></figure><h1 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h1><p>拉取本地已有的分支代码，更新代码</p><p>拉取本地没有的代码，更新分支</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 将当前远程分支代码更新到本地所处分支</span><br>git pull 关联名称 远程分支名称<br><br><span class="hljs-comment"># 将远程仓库的分支更新下来</span><br>git pull 关联名称 远程分支名称:本地分支名称<br><br><span class="hljs-comment"># 如果强制的要求远程分支和本地分支进行合并需要指定参数--allow-unrelated-histories</span><br>git pull 关联名称 远程分支名称 --allow-unrelated-histories<br><br></code></pre></td></tr></table></figure><h1 id="每次代码提交前可以做此操作，可以解决冲突"><a href="#每次代码提交前可以做此操作，可以解决冲突" class="headerlink" title="每次代码提交前可以做此操作，可以解决冲突"></a>每次代码提交前可以做此操作，可以解决冲突</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment">#切换上一次提交工作区</span><br>git stash<br><span class="hljs-comment">#拉代码</span><br>git pull 远程连接名 分支<br><span class="hljs-comment">#恢复工作区</span><br>git stash pop<br><span class="hljs-comment">#有冲突解决冲突 ，提交代码</span><br></code></pre></td></tr></table></figure>
+                <div class="note note-info">
+            <p>问题来了，如果你现在在自己的笔记本上写的博客，部署在了网站上，那么你在家里用台式机，或者实验室的台式机，发现你电脑里面没有博客的文件，或者要换电脑了，最后不知道怎么移动文件，怎么办？</p><p>在这里我们就可以利用git的分支系统进行多终端工作了，这样每次打开不一样的电脑，只需要进行简单的配置和在github上把文件同步下来，就可以无缝操作了。</p>
           </div>
+
+<h1 id="机制"><a href="#机制" class="headerlink" title="机制"></a>机制</h1><p>机制是这样的，由于hexo d上传部署到github的其实是hexo编译后的文件，是用来生成网页的，不包含源文件。</p>
+<p><img src="/img/article/2023/7/1.png" srcset="/img/loading.gif" lazyload></p>
+<p>也就是上传的是在本地目录里自动生成的<code>.deploy_git</code>里面。其他文件 ，包括我们写在source 里面的，和<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:489124966%7D">配置文件</a>，主题文件，都没有上传到github。所以可以利用git的分支管理，将源文件上传到github的另一个分支即可。</p>
+<h1 id="上传分支"><a href="#上传分支" class="headerlink" title="上传分支"></a>上传分支</h1><p>首先，先在github上新建一个hexo分支，如图：</p>
+<p><img src="/img/article/2023/7/2.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>然后在这个仓库的settings中，选择默认分支为<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=hexo%E5%88%86%E6%94%AF&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:489124966%7D">hexo分支</a>（这样每次同步的时候就不用指定分支，比较方便）。</p>
+<p><img src="/img/article/2023/7/3.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后在本地的任意目录下，打开git bash，将分支克隆下来</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git <span class="hljs-built_in">clone</span> 链接地址<br></code></pre></td></tr></table></figure>
+
+<p>接下来在克隆到本地的<code>ZJUFangzh.github.io</code>中，把除了.git 文件夹外的所有文件都删掉</p>
+<p>把之前我们写的博客源文件全部复制过来，除了<code>.deploy_git</code>。这里应该说一句，复制过来的源文件应该有一个<code>.gitignore</code>，用来忽略一些不需要的文件，如果没有的话，自己新建一个，在里面写上如下，表示这些类型文件不需要git：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs .gitignore">.DS_Store<br>Thumbs.db<br>db.json<br>*.log<br>node_modules/<br>public/<br>.deploy*/<br></code></pre></td></tr></table></figure>
+
+<p>注意，如果你之前克隆过<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=theme&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:489124966%7D">theme</a>中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为git不能嵌套上传，最好是显示隐藏文件，检查一下有没有，否则上传的时候会出错，导致你的主题文件无法上传，这样你的配置在别的电脑上就用不了了</p>
+<p>然后上传</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">git add .<br>git commit –m <span class="hljs-string">&quot;add branch&quot;</span><br>git push <br></code></pre></td></tr></table></figure>
+
+<p>这样就上传完了，可以去你的github上看一看hexo分支有没有上传上去，其中<code>node_modules</code>、<code>public</code>、<code>db.json</code>已经被忽略掉了，没有关系，不需要上传的，因为在别的电脑上需要重新输入命令安装 。</p>
+<p><img src="/img/article/2023/7/4.png" srcset="/img/loading.gif" lazyload></p>
+<p>这样就上传完了。</p>
+<h1 id="更换电脑操作"><a href="#更换电脑操作" class="headerlink" title="更换电脑操作"></a>更换电脑操作</h1><p>一样的，跟之前的环境搭建一样，安装git、node、hexo</p>
+<p>但是已经不需要初始化了，</p>
+<p>直接在任意文件夹下，</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git <span class="hljs-built_in">clone</span> 链接<br></code></pre></td></tr></table></figure>
+
+<p>然后进入克隆到的文件夹：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cd</span> xxx.github.io<br>npm install<br>npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure>
+
+<p>生成，部署</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo g<br>hexo d<br><br></code></pre></td></tr></table></figure>
+
+<p>然后就可以开始写你的新博客了</p>
+<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a><strong>Tips:</strong></h1><ol>
+<li><p>不要忘了，每次写完最好都把源文件上传一下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">git add .<br>git commit –m <span class="hljs-string">&quot;xxxx&quot;</span><br>git push <br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>如果是在已经编辑过的电脑上，已经有<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=clone&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:489124966%7D">clone</a>文件夹了，那么，每次只要和远端同步一下就行了</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">git pull<br></code></pre></td></tr></table></figure></li>
+</ol>
+
                 
               </div>
             
@@ -312,6 +360,8 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/hexo/" class="print-no-link">#hexo</a>
+      
         <a href="/tags/git/" class="print-no-link">#git</a>
       
     </div>
@@ -324,8 +374,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>git常用命令</div>
-      <div>http://example.com/2023/07/25/git教程/</div>
+      <div>hexo+git分支实现多终端工作</div>
+      <div>http://example.com/2023/07/26/hexo+git分支实现多终端工作/</div>
     </div>
     <div class="license-meta">
       
@@ -337,7 +387,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月25日</div>
+          <div>2023年7月26日</div>
         </div>
       
       
@@ -369,18 +419,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/25/Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/" title="Hexo迁移">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hexo迁移</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/21/Hexo%20Fluid/" title="Hexo用户手册">
-                        <span class="hidden-mobile">Hexo用户手册</span>
+                      <a href="/2023/07/25/Hexo%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/" title="Hexo迁移">
+                        <span class="hidden-mobile">Hexo迁移</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -403,7 +447,7 @@
         var options = Object.assign(
           {"clientID":"dae7d64f427e004d773c","clientSecret":"46f6ed166a889a5d250397ee8b66b6246ffc9ac2","repo":"hao585.github.io","owner":"hao585","admin":["hao585"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '140b544b1e3a4207f9eaaf2fa1a06773'
+            id: 'a45d6318356e6ad45df3423872484fcc'
           }
         )
         var gitalk = new Gitalk(options);
